@@ -57,6 +57,7 @@ vorpal
 
       // Check for keys that already have this translation
       let duplicates = lib.findDuplicates(eng, translation);
+
       if (duplicates.length) {
         let message = 'This string has already been translated using the following keys:';
         message = message + duplicates.reduce((keys, duplicate) => {

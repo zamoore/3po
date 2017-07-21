@@ -31,7 +31,11 @@ module.exports = {
             }
           }
         } else if (translation === file[key]) {
-          return key;
+          if (!recursion) {
+            paths.push(key);
+          } else {
+            return key;
+          }
         }
       }
     }
